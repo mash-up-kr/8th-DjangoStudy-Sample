@@ -28,7 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+## Auth
+# Custom UserModel정의
+#  (members앱이 INSTALLED_APPS에 추가되어 있어야 함)
+AUTH_USER_MODEL = 'members.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'members',
 ]
 
 MIDDLEWARE = [
